@@ -19,6 +19,5 @@ jobs:
           node -v
           npm -v  
 
-    steps:
       - name: Step 2 
         run: echo "This is step 2"

@@ -6,7 +6,15 @@ jobs:
   action-workflow-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checking Pwd
+      - name: Files Before Checkout
         run: |
           pwd
-          ls
+          ls -a
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Files After Checkout
+        run: |
+          pwd
+          ls -a

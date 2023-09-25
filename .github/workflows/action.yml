@@ -1,0 +1,12 @@
+name: Action Workflow
+
+on: [push]
+
+jobs:
+  action-workflow-job:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checking Pwd
+      run: |
+        pwd
+        ls

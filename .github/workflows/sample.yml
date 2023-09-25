@@ -1,11 +1,15 @@
 name: New Workflow
 
 on: 
+  schedule:
+    - cron: "* * * * *"
+
   push:
     branches: ["main"]
 
   pull_request:
     branches: ["main"]
+    types: [closed, assigned, opened, reopened]
 
 jobs: 
   testing-sample-workflow:
@@ -21,3 +25,6 @@ jobs:
 
       - name: Step 2 
         run: echo "This is step 2"
+
+      - name: Step 3 
+        run: echo "This is step 3"

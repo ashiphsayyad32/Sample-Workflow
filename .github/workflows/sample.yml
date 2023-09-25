@@ -1,14 +1,14 @@
 name: New Workflow
 
 on: 
-  schedule:
-    - cron: "* * * * *"
+  # schedule:
+  #   - cron: "* * * * *"
 
-  push:
-    branches: ["main"]
+  # push:
+  #   branches: ["main"]
 
   pull_request:
-    branches: ["main"]
+    # branches: ["main"]
     types: [closed, assigned, opened, reopened]
 
 jobs: 

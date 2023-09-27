@@ -1,6 +1,18 @@
 name: Action Workflow
 
-on: [push]
+on: 
+  push:
+    branches:
+      - main
+    #   - '!test'
+
+    # tags:
+    #   - v1.*
+
+    # paths: 
+    #   - '**.js'
+    #   - 'docs/*'
+    #   - '!docs/file.txt'
 
 jobs:
   action-workflow-job:

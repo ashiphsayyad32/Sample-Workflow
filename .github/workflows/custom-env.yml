@@ -1,0 +1,17 @@
+name: custom-env-workflow
+
+on: push
+
+env:
+  NAME: Ashiph
+
+jobs:
+  custom-env-job:
+    runs-on: ubuntu-latest
+
+    env: 
+      SURNAME: Sayyad
+
+    steps:
+      - name: "step1"
+        run: echo "Welcome $name $surname"

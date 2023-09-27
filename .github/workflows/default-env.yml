@@ -10,7 +10,7 @@ jobs:
         run: |
           echo "My Secret is $SECRET1"
         env:
-          SECRET1: ${{ secret.TEST }}
+          SECRET1: ${{ secrets.TEST }}
 
 
 

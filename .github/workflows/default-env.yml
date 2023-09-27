@@ -6,6 +6,14 @@ jobs:
   default-env-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Testing secret
+        run: |
+          echo "My Secret is $SECRET1"
+        env:
+          SECRET1: ${{secret.TEST}}
+
+
+
       - name: Environment Variables
         run: |
           echo "GITHUB_ACTION: ${GITHUB_ACTION}"

@@ -8,7 +8,10 @@ jobs:
     steps:
       - name: Testing secret
         run: |
-          echo "My Secret is $SECRET1"
+          if [ "$SECRET1" == "gsgg" ]
+          then
+            echo "if condition true"
+          fi
         env:
           SECRET1: ${{ secrets.TEST }}
 

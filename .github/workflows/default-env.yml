@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Testing secret
         run: |
-          if [ "$SECRET1" == "gsgg" ]
+          if [ "$SECRET1" == "testif" ]
           then
             echo "if condition true"
           fi

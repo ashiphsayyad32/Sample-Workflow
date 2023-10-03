@@ -6,9 +6,10 @@ jobs:
   matrix-job:
     strategy:
       matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
         node-version: [10,11,12]
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Default Node Version used
         run: node -v

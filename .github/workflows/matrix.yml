@@ -2,7 +2,7 @@ name: Matrix Workflow
 
 on: push
 
-job:
+jobs:
   matrix-job:
     runs-on: ubuntu-latest
     steps:

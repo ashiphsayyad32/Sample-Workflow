@@ -4,6 +4,10 @@ on: push
 
 jobs:
   matrix-job:
+    strategy:
+      matrix:
+        node-version: [10,11,12]
+
     runs-on: ubuntu-latest
     steps:
       - name: Default Node Version used
@@ -11,7 +15,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with: 
-          node-version: 8
+          node-version: {{ matrix.node-version }}
 
       - name: After setup node version
         run: node -v
